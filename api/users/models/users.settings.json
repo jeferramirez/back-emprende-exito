@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users",
+  "info": {
+    "name": "Users"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "celular": {
+      "type": "string"
+    },
+    "pais": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "string"
+    },
+    "sexo": {
+      "type": "string"
+    },
+    "nick": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "fechaNacimiento": {
+      "type": "date"
+    }
+  }
+}
