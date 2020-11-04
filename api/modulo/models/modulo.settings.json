@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modulos",
+  "info": {
+    "name": "modulo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "programa": {
+      "model": "programa"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "tutor": {
+      "type": "string"
+    }
+  }
+}
