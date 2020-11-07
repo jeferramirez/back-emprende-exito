@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "perfils",
+  "collectionName": "perfil_usuarios",
   "info": {
-    "name": "perfil"
+    "name": "perfilUsuario",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,11 +11,23 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nombre": {
+    "profesion": {
       "type": "string"
     },
-    "edad": {
+    "ocupacion": {
       "type": "string"
+    },
+    "tipoProyecto": {
+      "type": "string"
+    },
+    "habilidades": {
+      "type": "text"
+    },
+    "intereses": {
+      "type": "text"
+    },
+    "acercaDe": {
+      "type": "text"
     },
     "users_permissions_user": {
       "plugin": "users-permissions",

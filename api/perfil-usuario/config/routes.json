@@ -2,56 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/perfils",
-      "handler": "perfil.find",
+      "path": "/perfil-usuarios",
+      "handler": "perfil-usuario.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/perfils/count",
-      "handler": "perfil.count",
+      "path": "/perfil-usuarios/count",
+      "handler": "perfil-usuario.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/perfils/:id",
-      "handler": "perfil.findOne",
+      "path": "/perfil-usuarios/:id",
+      "handler": "perfil-usuario.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/perfils",
-      "handler": "perfil.create",
+      "path": "/perfil-usuarios",
+      "handler": "perfil-usuario.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/perfils/:id",
-      "handler": "perfil.update",
+      "path": "/perfil-usuarios/:id",
+      "handler": "perfil-usuario.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/perfils/:id",
-      "handler": "perfil.delete",
+      "path": "/perfil-usuarios/:id",
+      "handler": "perfil-usuario.delete",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/perfil/:edad",
-      "handler": "perfil.busca",
+      "path": "/perfil-user/:idUser",
+      "handler": "perfil-usuario.perfilUser",
       "config": {
         "policies": []
       }
