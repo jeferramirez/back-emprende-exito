@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "perfil_usuarios",
   "info": {
-    "name": "perfil_usuario",
+    "name": "perfilUsuario",
     "description": ""
   },
   "options": {
@@ -11,38 +11,27 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "profesion": {
       "type": "string"
     },
     "ocupacion": {
       "type": "string"
     },
-    "tipo_proyecto": {
+    "tipoProyecto": {
       "type": "string"
     },
-    "interes": {
+    "habilidades": {
       "type": "text"
     },
-    "habilidad": {
+    "intereses": {
       "type": "text"
     },
-    "acerca_de": {
+    "acercaDe": {
       "type": "text"
     },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

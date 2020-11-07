@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/perfil-user/:idUser",
+      "handler": "perfil-usuario.perfilUser",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
