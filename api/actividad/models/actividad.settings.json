@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actividads",
+  "info": {
+    "name": "actividad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "leccion": {
+      "model": "leccion"
+    },
+    "estado": {
+      "type": "boolean"
+    }
+  }
+}

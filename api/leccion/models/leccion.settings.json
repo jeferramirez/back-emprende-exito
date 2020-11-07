@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leccions",
+  "info": {
+    "name": "leccion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "modulo": {
+      "model": "modulo"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
