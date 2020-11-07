@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos",
+      "handler": "ficha-seguimiento.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos/count",
+      "handler": "ficha-seguimiento.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos/user/:idUser",
+      "handler": "ficha-seguimiento.perfilUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos/:id",
+      "handler": "ficha-seguimiento.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ficha-seguimientos",
+      "handler": "ficha-seguimiento.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ficha-seguimientos/:id",
+      "handler": "ficha-seguimiento.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ficha-seguimientos/:id",
+      "handler": "ficha-seguimiento.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

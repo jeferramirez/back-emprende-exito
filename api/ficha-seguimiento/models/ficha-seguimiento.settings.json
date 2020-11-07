@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ficha_seguimientos",
+  "info": {
+    "name": "ficha_seguimiento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "fecha_proximoseguimiento": {
+      "type": "date"
+    },
+    "fecha_ultimoseguimiento": {
+      "type": "date"
+    },
+    "descripcion": {
+      "type": "string"
+    }
+  }
+}
