@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/validatePass",
+      "handler": "perfil-usuario.validatePass",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
