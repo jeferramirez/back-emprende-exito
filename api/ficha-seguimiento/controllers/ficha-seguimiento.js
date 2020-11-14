@@ -1,5 +1,6 @@
 'use strict';
 
+//
 module.exports = {
   async perfilUser(ctx) {
     const { idUser } = ctx.params;
