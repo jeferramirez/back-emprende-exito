@@ -5,4 +5,11 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async listaActividades(ctx) {
+    const { idLesson } = ctx.params;
+    return await strapi
+      .query("actividad")
+      .find({ leccion: idLesson });
+  },
+};

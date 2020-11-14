@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/listaActividads/:idLesson",
+      "handler": "actividad.listaActividades",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

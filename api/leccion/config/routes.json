@@ -47,6 +47,22 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/listaLeccions/:idModulo",
+      "handler": "leccion.listaLecciones",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/deleteLesson/:idLesson",
+      "handler": "leccion.deleteLesson",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

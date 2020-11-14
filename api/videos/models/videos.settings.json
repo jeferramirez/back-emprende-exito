@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "name": "videos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "actividad": {
+      "model": "actividad"
+    }
+  }
+}

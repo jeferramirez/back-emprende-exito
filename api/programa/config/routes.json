@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "DELETE",
+      "path": "/deleteProgram/:id",
+      "handler": "programa.deleteProgram",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

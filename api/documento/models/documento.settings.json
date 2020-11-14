@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentos",
+  "info": {
+    "name": "documento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "actividad": {
+      "model": "actividad"
+    }
+  }
+}
