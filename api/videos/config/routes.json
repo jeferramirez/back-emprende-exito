@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/listaVideos/:idActivity",
+      "handler": "videos.listaVideos",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

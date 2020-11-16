@@ -5,4 +5,11 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async listaDocs(ctx) {
+    const { idActivity } = ctx.params;
+    return await strapi
+      .query("documento")
+      .find({ actividad: idActivity });
+  }
+};

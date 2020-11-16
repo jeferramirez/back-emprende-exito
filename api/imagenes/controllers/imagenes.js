@@ -5,4 +5,11 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async listaImagenes(ctx) {
+    const { idActivity } = ctx.params;
+    return await strapi
+      .query("imagenes")
+      .find({ actividad: idActivity });
+  }
+};

@@ -58,7 +58,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/deleteModule/:idModulo",
+      "path": "/deleteModule/:idModule",
       "handler": "modulo.deleteModule",
       "config": {
         "policies": []

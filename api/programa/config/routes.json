@@ -50,7 +50,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/deleteProgram/:id",
+      "path": "/deleteProgram/:idProgram",
       "handler": "programa.deleteProgram",
       "config": {
         "policies": []
