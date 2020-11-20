@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progreso_emprendedors",
+  "info": {
+    "name": "progreso-emprendedor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "completado": {
+      "type": "boolean"
+    },
+    "video": {
+      "model": "videos"
+    },
+    "imagene": {
+      "model": "imagenes"
+    },
+    "documento": {
+      "model": "documento"
+    }
+  }
+}

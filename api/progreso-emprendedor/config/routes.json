@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/progreso-emprendedors",
+      "handler": "progreso-emprendedor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/progreso-emprendedors/count",
+      "handler": "progreso-emprendedor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/progreso-emprendedors/:id",
+      "handler": "progreso-emprendedor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/progreso-emprendedors",
+      "handler": "progreso-emprendedor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/progreso-emprendedors/:id",
+      "handler": "progreso-emprendedor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/progreso-emprendedors/:id",
+      "handler": "progreso-emprendedor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
