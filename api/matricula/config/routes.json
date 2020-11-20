@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/getUserMatricula/:id",
+      "handler": "matricula.getUserMatricula",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
