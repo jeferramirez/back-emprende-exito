@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "progreso_emprendedors",
   "info": {
-    "name": "progreso-emprendedor"
+    "name": "progreso-emprendedor",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,6 +22,10 @@
     },
     "documento": {
       "model": "documento"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
