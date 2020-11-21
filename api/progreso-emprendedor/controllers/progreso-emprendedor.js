@@ -67,7 +67,8 @@ module.exports = {
         matriculas.map(async (matricula) => {
           const modulos = await strapi
             .query("modulo")
-            .find({ programa: matricula.programa.id }, []);
+            .find({ programa: matricula.programa }, []);
+
           if (modulos.length > 0) {
             modulos.map(async (modulo) => {
               const lecciones = await strapi
@@ -79,6 +80,7 @@ module.exports = {
                   const actividades = await strapi
                     .query("actividad")
                     .find({ leccion: leccion.id }, []);
+
                   if (actividades.length > 0) {
                     actividades.map(async (actividad) => {
                       const videos = await strapi
@@ -128,7 +130,7 @@ module.exports = {
                         .query("documento")
                         .find({ actividad: actividad.id }, []);
 
-                      if (imagenes.length > 0) {
+                      if (documentos.length > 0) {
                         documentos.map(async (documento) => {
                           const existe = await strapi
                             .query("progreso-emprendedor")
