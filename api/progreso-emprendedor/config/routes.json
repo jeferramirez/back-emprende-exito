@@ -47,6 +47,48 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/progressProgram/:idUser/:idProgram",
+      "handler": "progreso-emprendedor.progressProgram",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/createProgreso/:idUser",
+      "handler": "progreso-emprendedor.createProgreso",
+      "config": {
+        "policies": []
+      }
+    }
+    ,
+    {
+      "method": "GET",
+      "path": "/progressModule/:idUser/:idModule",
+      "handler": "progreso-emprendedor.progressModule",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/setProgressID",
+      "handler": "progreso-emprendedor.setProgressID",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deleteProgress",
+      "handler": "progreso-emprendedor.deleteProgress",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
+

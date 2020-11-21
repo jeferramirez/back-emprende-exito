@@ -26,6 +26,12 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "programa": {
+      "model": "programa"
+    },
+    "modulo": {
+      "model": "modulo"
     }
   }
 }
