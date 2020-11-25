@@ -56,11 +56,11 @@ module.exports = {
         apellidos: usuario.users_permissions_user.apellido,
         email: usuario.users_permissions_user.email,
         estado: usuario.users_permissions_user.estado ? 'activo' : 'inactivo',
-        intereses: usuario.intereses,
-        habilidades: usuario.habilidades,
-        tipoProyecto: usuario.tipoProyecto,
-        profesion: usuario.profesion,
-        ocupacion: usuario.ocupacion,
+        intereses: usuario.intereses === null? '' : usuario.intereses,
+        habilidades: usuario.habilidades === null? '' : usuario.habilidades,
+        tipoProyecto: usuario.tipoProyecto === null? '' : usuario.tipoProyecto,
+        profesion: usuario.profesion === null? '' : usuario.profesion,
+        ocupacion: usuario.ocupacion === null? '' : usuario.ocupacion,
         fechaSeguimiento: ficha_seguimiento
           ? ficha_seguimiento.fecha_ultimoseguimiento
           : "",
