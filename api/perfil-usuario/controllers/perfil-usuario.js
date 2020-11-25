@@ -28,4 +28,44 @@ module.exports = {
       ctx.send({ code: 400, status: false });
     }
   },
+
+  async reporteUsuario(ctx) {
+    const usuarios = await strapi.query("perfil-usuario").find();
+    const arrayFichas = usuarios.map((usuario) => {
+      return strapi.query("ficha-seguimiento").findOne({
+        users_permissions_user: usuario.users_permissions_user.id,
+        _sort: "published_at:desc",
+      });
+    });
+
+    const resp = await Promise.all(arrayFichas);
+    const reporteUsuario = usuarios.map((usuario) => {
+      const ficha_seguimiento = resp.find((element) => {
+        if (element) {
+          if (
+            element.users_permissions_user.id ===
+            usuario.users_permissions_user.id
+          ) {
+            return element;
+          }
+        }
+      });
+      return {
+        id: usuario.users_permissions_user.id,
+        nombres: usuario.users_permissions_user.nombre,
+        apellidos: usuario.users_permissions_user.apellido,
+        email: usuario.users_permissions_user.email,
+        estado: usuario.users_permissions_user.estado ? 'activo' : 'inactivo',
+        intereses: usuario.intereses,
+        habilidades: usuario.habilidades,
+        tipoProyecto: usuario.tipoProyecto,
+        profesion: usuario.profesion,
+        ocupacion: usuario.ocupacion,
+        fechaSeguimiento: ficha_seguimiento
+          ? ficha_seguimiento.fecha_ultimoseguimiento
+          : "",
+      };
+    });
+    ctx.send([...reporteUsuario]);
+  },
 };
