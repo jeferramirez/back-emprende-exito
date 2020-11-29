@@ -96,6 +96,9 @@
     },
     "rol": {
       "type": "string"
+    },
+    "codeRecovery": {
+      "type": "string"
     }
   }
 }
