@@ -14,6 +14,7 @@
     "bcrypt": "^5.0.0",
     "knex": "<0.20.0",
     "mysql": "latest",
+    "node-mailjet": "^3.3.1",
     "strapi": "3.2.5",
     "strapi-admin": "3.2.5",
     "strapi-connector-bookshelf": "3.2.5",
@@ -22,6 +23,7 @@
     "strapi-plugin-email": "3.2.5",
     "strapi-plugin-upload": "3.2.5",
     "strapi-plugin-users-permissions": "3.2.5",
+    "strapi-provider-email-mj": "^3.0.5",
     "strapi-utils": "3.2.5"
   },
   "author": {

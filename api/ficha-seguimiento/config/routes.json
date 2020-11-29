@@ -48,6 +48,15 @@
         "policies": []
       }
     },
+
+    {
+      "method": "POST",
+      "path": "/resetpass",
+      "handler": "ficha-seguimiento.sendmail",
+      "config": {
+        "policies": []
+      }
+    },
     {
       "method": "DELETE",
       "path": "/ficha-seguimientos/:id",
