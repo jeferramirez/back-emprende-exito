@@ -17,7 +17,7 @@ module.exports = {
 
     if (userEmail === bdEmail) {
       const codeRecovery = uid();
-      const updateuser  = await strapi.query('user', 'users-permissions').update({ id: user.id }, { codeRecovery });
+      await strapi.query('user', 'users-permissions').update({ id: user.id }, { codeRecovery });
 
         const mailjet = require("node-mailjet").connect(
           "9601daa407b47b0c9f0b8632781a94da",
@@ -39,26 +39,21 @@ module.exports = {
               Subject: "Reset password emprende con exito.",
               TextPart: "usuario",
               HTMLPart:
-                "<h3>Para resetear el password navegue al siguiente link <a href='https://www.mailjet.com/'>Emprende</a>!</h3><br />",
+                "<h3>Para resetear el password navegue al siguiente link <a href='http://localhost:4200/reset-pass/'>Emprende</a>!</h3><br />",
               CustomID: "",
             },
           ],
         });
-        request
-          .then((result) => {
-            ctx.send({ code: 200, status: true });
-            console.log(result.body);
-          })
-          .catch((err) => {
-            ctx.send({ code: 400, status: false });
-            console.log(err.statusCode);
-          });
+
+        try {
+          const result =  await request;
+          console.log(result.body);
+          ctx.send({ code: 200, status: true });
+        } catch (error) {
+          ctx.send({ code: 400, status: false });
+          console.log(err.statusCode);
+        }
 
       }
-
-    // validar que recibe email
-   /*
-
-    */
   },
 };
