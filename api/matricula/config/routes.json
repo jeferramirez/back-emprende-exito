@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/reporteMatricula",
+      "handler": "matricula.reporteMatricula",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

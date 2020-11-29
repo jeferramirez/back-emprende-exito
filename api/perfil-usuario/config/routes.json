@@ -63,6 +63,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/reporteUsuario",
+      "handler": "perfil-usuario.reporteUsuario",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
