@@ -17,6 +17,7 @@ module.exports = {
 
     if (userEmail === bdEmail) {
       const codeRecovery = uid();
+      const url = 'http://localhost:4200/reset-pass/' + codeRecovery;
       await strapi.query('user', 'users-permissions').update({ id: user.id }, { codeRecovery });
 
         const mailjet = require("node-mailjet").connect(
@@ -39,7 +40,7 @@ module.exports = {
               Subject: "Reset password emprende con exito.",
               TextPart: "usuario",
               HTMLPart:
-                "<h3>Para resetear el password navegue al siguiente link <a href='http://localhost:4200/reset-pass/'>Emprende</a>!</h3><br />",
+              `<h3>Para resetear el password navegue al siguiente link <a href='${url}'>Emprende</a>!</h3><br />`,
               CustomID: "",
             },
           ],

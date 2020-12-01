@@ -51,7 +51,7 @@
 
     {
       "method": "POST",
-      "path": "/resetpass",
+      "path": "/sendmail",
       "handler": "ficha-seguimiento.sendmail",
       "config": {
         "policies": []
