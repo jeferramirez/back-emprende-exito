@@ -35,7 +35,8 @@ module.exports = {
       .query("progreso-emprendedor")
       .count({ user: idUser, programa: idProgram, completado: true });
 
-    const porcentaje = (completado * 100) / total;
+    const porcentaje = Math.round((completado * 100) / total);
+
 
     ctx.send({ code: 200, status: true, porcentaje });
   },
@@ -50,7 +51,8 @@ module.exports = {
       .query("progreso-emprendedor")
       .count({ user: idUser, modulo: idModule, completado: true });
 
-    const porcentaje = (completado * 100) / total;
+      const porcentaje =  Math.round((completado * 100) / total);
+
 
     ctx.send({ code: 200, status: true, porcentaje });
   },
