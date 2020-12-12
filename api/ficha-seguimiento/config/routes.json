@@ -18,17 +18,16 @@
     },
     {
       "method": "GET",
-      "path": "/ficha-seguimientos/:id",
-      "handler": "ficha-seguimiento.findOne",
+      "path": "/ficha-seguimientos/user/:idUser",
+      "handler": "ficha-seguimiento.perfilUser",
       "config": {
         "policies": []
       }
     },
-
     {
       "method": "GET",
-      "path": "/ficha-seguimientos/programa/:id",
-      "handler": "ficha-seguimiento.getSeguimientoByProgram",
+      "path": "/ficha-seguimientos/:id",
+      "handler": "ficha-seguimiento.findOne",
       "config": {
         "policies": []
       }
@@ -49,6 +48,15 @@
         "policies": []
       }
     },
+
+    {
+      "method": "POST",
+      "path": "/sendmail",
+      "handler": "ficha-seguimiento.sendmail",
+      "config": {
+        "policies": []
+      }
+    },
     {
       "method": "DELETE",
       "path": "/ficha-seguimientos/:id",
@@ -56,6 +64,15 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos/programa/:id",
+      "handler": "ficha-seguimiento.getSeguimientoByProgram",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
+
