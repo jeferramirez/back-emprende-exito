@@ -5,4 +5,11 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+
+  async getSeguimientoByProgram(ctx) {
+    const { id } = ctx.params;
+    return await strapi.query("ficha-seguimiento").find({ programa: id });
+  },
+
+};

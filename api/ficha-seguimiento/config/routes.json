@@ -24,6 +24,15 @@
         "policies": []
       }
     },
+
+    {
+      "method": "GET",
+      "path": "/ficha-seguimientos/programa/:id",
+      "handler": "ficha-seguimiento.getSeguimientoByProgram",
+      "config": {
+        "policies": []
+      }
+    },
     {
       "method": "POST",
       "path": "/ficha-seguimientos",
