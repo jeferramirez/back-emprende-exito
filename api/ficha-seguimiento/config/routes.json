@@ -67,7 +67,7 @@
     },
     {
       "method": "GET",
-      "path": "/ficha-seguimientos/programa/:id",
+      "path": "/ficha-seguimientos/programa/:id/:idUser",
       "handler": "ficha-seguimiento.getSeguimientoByProgram",
       "config": {
         "policies": []

@@ -8,8 +8,8 @@
 module.exports = {
 
   async getSeguimientoByProgram(ctx) {
-    const { id } = ctx.params;
-    return await strapi.query("ficha-seguimiento").find({ programa: id });
+    const { id, idUser } = ctx.params;
+    return await strapi.query("ficha-seguimiento").find({ programa: id,  users_permissions_user: idUser });
   },
 
   async perfilUser(ctx) {
