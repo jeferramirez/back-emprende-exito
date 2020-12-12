@@ -18,14 +18,6 @@
     },
     {
       "method": "GET",
-      "path": "/ficha-seguimientos/user/:idUser",
-      "handler": "ficha-seguimiento.perfilUser",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/ficha-seguimientos/:id",
       "handler": "ficha-seguimiento.findOne",
       "config": {
@@ -44,15 +36,6 @@
       "method": "PUT",
       "path": "/ficha-seguimientos/:id",
       "handler": "ficha-seguimiento.update",
-      "config": {
-        "policies": []
-      }
-    },
-
-    {
-      "method": "POST",
-      "path": "/sendmail",
-      "handler": "ficha-seguimiento.sendmail",
       "config": {
         "policies": []
       }

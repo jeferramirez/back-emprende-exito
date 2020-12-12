@@ -10,10 +10,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "fecha_proximoseguimiento": {
       "type": "date"
     },
@@ -21,7 +17,18 @@
       "type": "date"
     },
     "descripcion": {
-      "type": "string"
+      "type": "text"
+    },
+    "programa": {
+      "model": "programa"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "create_user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
