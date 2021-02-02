@@ -60,11 +60,11 @@ module.exports = {
   async createProgreso(ctx) {
     const { idUser } = ctx.params;
 
-    try {
+    try {   
       const matriculas = await strapi
         .query("matricula")
         .find({ users_permissions_user: idUser }, []);
-
+        
       if (matriculas.length > 0) {
         matriculas.map(async (matricula) => {
           const modulos = await strapi
@@ -96,9 +96,9 @@ module.exports = {
                           if (!existe) {
                             await strapi.query("progreso-emprendedor").create({
                               video: video.id,
-                              imagene: "",
+                              imagene: null,
                               user: idUser,
-                              documento: "",
+                              documento: null,
                               completado: false,
                               programa: matricula.programa,
                               modulo: modulo.id,
@@ -117,10 +117,10 @@ module.exports = {
                             .findOne({ imagene: imagen.id, user: idUser });
                           if (!existe) {
                             await strapi.query("progreso-emprendedor").create({
-                              video: "",
+                              video: null,
                               imagene: imagen.id,
                               user: idUser,
-                              documento: "",
+                              documento: null,
                               completado: false,
                               programa: matricula.programa,
                               modulo: modulo.id,
@@ -139,8 +139,8 @@ module.exports = {
                             .findOne({ documento: documento.id, user: idUser });
                           if (!existe) {
                             await strapi.query("progreso-emprendedor").create({
-                              video: "",
-                              imagene: "",
+                              video: null,
+                              imagene: null,
                               user: idUser,
                               documento: documento.id,
                               completado: false,
